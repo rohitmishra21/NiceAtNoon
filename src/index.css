@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: w;
+  src: url(./Fonts/w.woff2);
+}
+
+@font-face {
+  font-family: www;
+  src: url(./Fonts/www.woff2);
+}
+
+@font-face {
+  font-family: ww;
+  src: url(./Fonts/ww.woff2);
+}
+
+.w {
+  font-family: w;
+}
+.www {
+  font-family: ww;
+}
+.ww {
+  font-family: www;
+}
+
+.spin {
+  animation: spin linear 5s infinite;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+/* hover:rounded-full duration-500 transition-all  gap-2 bg-white relative after:left-4 ww  after:w-0 hover:after:w-36 after:duration-1000 after:transition-all after:h-0.5 after:bg-black/80 after:absolute after:bottom-2 rounded-lg */
+
+.btn {
+  margin: 12px 6px;
+  padding: 14px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.btn:hover{
+  border-radius: 100px;
+}
+
+.btn::after {
+  content: "";
+  height: 1.6px;
+  position: absolute;
+  bottom: 16px;
+  left: 30px;
+  width: 0%;
+  transition: all linear 0.8s;
+  
+}
+
+.btn:hover::after {
+  width: 65%;
+
+}
+
+.imgContaner:hover .centerImg {
+  opacity: 100%;
+}
